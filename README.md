@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# React 哲学
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 命令式 vs 声明式
 
-## Available Scripts
+作为一个前端开发，那么入门的标志性的里程碑是**声明式的思考方式**
 
-In the project directory, you can run:
+### 命令式
 
-### `npm start`
+我需要实现一个怎么怎么样的功能
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 声明式
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+我需要一个怎么怎么样的结果
 
-### `npm test`
+### 在前端领域的应用
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+结果 = **页面 (HTML + CSS) + 交互 (JS)**
 
-### `npm run build`
+我需要一个怎么怎么样的结果 = 我需要一个怎么怎么样的页面 + 我需要一个怎么怎么样的交互
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 1. 步骤一：将 UI 拆解为组件层级结构
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**代码及文档**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+EventExplorer
+-- Header
+-- Tabs
+-- PopularEvents
+---- Thumbnail
+---- Event
+------ Metadata
+------ Description
+------ ImageGallery
+------ Footer
+-------- Followers
+-------- Actions
 
-### `npm run eject`
+## 2. 步骤二：使用 React 构建一个静态版本
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 3. 步骤三：找出 UI 精简且完整的 state 表示 (最小单元)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 4. 步骤四：验证 state 应该被放置在哪里
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 5. 步骤五：添加反向数据流
